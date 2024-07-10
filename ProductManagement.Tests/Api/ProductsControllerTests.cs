@@ -1,11 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Moq;
 using ProductManagement.Api.Controllers;
 using ProductManagement.Application.DTOs;
 using ProductManagement.Application.Services.Interfaces;
-using System;
-using System.Threading.Tasks;
-using Xunit;
+
+namespace ProductManagement.Tests.Api;
 
 public class ProductsControllerTests
 {

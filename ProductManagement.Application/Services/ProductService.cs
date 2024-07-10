@@ -43,13 +43,13 @@ public class ProductService : IProductService
         var productRegistered = await _productRepository.AddAsync(productDTO);
         await _kafkaProducer.ProduceAsync("Produtos", productRegistered);
 
-        return _mapper.Map<ProductDTO>(productRegistered);
+        return productRegistered;
     }
 
     public async Task<ProductDTO> UpdateProductAsync(ProductDTO productDTO)
     {
         var product = await _productRepository.UpdateAsync(productDTO);
 
-        return _mapper.Map<ProductDTO>(product);
+        return product;
     }
 }
